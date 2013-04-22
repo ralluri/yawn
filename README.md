@@ -1,10 +1,10 @@
-Yawn, a weather notification module for Awesome 3.5+
+Yahoo's Awesome (WM) Weather Notification
 ================================
 
-Yawn is a module for Awesome WM for brief and compact
+Yawn is a module for Awesome WM providing brief and compact
 weather notification via naughty lib and Yahoo! Weather API.
 
-Originally a fork of perceptive_, it became a completely new module after
+Originally a 3.5 porting fork of perceptive_, it became a completely new module after
 various improvements and style changes.
 
 .. _perceptive: https://github.com/ioga/perceptive
