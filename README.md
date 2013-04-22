@@ -7,6 +7,8 @@ weather notification via naughty lib and Yahoo! Weather API.
 Originally a fork of perceptive_, it became a completely new module after
 various improvements and style changes.
 
+.. _perceptive: https://github.com/ioga/perceptive
+
 Usage
 -----
 Clone yawn repository into your $XDG_CONFIG_HOME/awesome (Awesome config dir).
@@ -81,5 +83,3 @@ Screenshot
 License
 -----
 <a href="http://www.wtfpl.net"><img src="http://www.wtfpl.net/wp-content/uploads/2012/12/logo-220x1601.png"/></a>
-
-.. _perceptive: https://github.com/ioga/perceptive
