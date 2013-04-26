@@ -77,7 +77,7 @@ function fetch_weather()
 
         -- Day/Night icon change
         hour = tonumber(os.date("%H"))
-        if hour >= 6 and hour <= 19
+        if hour >= 6 and hour <= 18
         then -- Day
             if forecast == "Clear" or forecast == "Fair" then sky = icon_path .. "24.png"
             elseif forecast == "Partly Cloudy" then sky = icon_path .. "26.png"
