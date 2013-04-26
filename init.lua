@@ -1,7 +1,6 @@
 -- yawn, a weather notification module for Awesome WM 3.5+.
 --
 -- Author        : Luke Bonham
--- Original idea : Ilia Glazkov
 
 local os = require("os")
 local wibox = require("wibox")
@@ -80,19 +79,19 @@ function fetch_weather()
         hour = tonumber(os.date("%H"))
         if hour >= 6 and hour <= 19
         then -- Day
-            if forecast == "Clear" or forecast == "Fair" then sky = icon_path .. "26.png"
-            elseif forecast == "Partly Cloudy" then sky = icon_path .. "28.png"
-            elseif forecast == "Mostly Cloudy" then sky = icon_path .. "22.png"
+            if forecast == "Clear" or forecast == "Fair" then sky = icon_path .. "24.png"
+            elseif forecast == "Partly Cloudy" then sky = icon_path .. "26.png"
+            elseif forecast == "Mostly Cloudy" then sky = icon_path .. "20.png"
             end
         else -- Night
-            if forecast == "Clear" or forecast == "Fair" then sky = icon_path .. "25.png"
-            elseif forecast == "Partly Cloudy" then sky = icon_path .. "27.png"
-            elseif forecast == "Mostly Cloudy" then sky = icon_path .. "21.png"
+            if forecast == "Clear" or forecast == "Fair" then sky = icon_path .. "23.png"
+            elseif forecast == "Partly Cloudy" then sky = icon_path .. "25.png"
+            elseif forecast == "Mostly Cloudy" then sky = icon_path .. "19.png"
             end
         end
  
         if sky == nil then
-            if forecast == "Cloudy" then sky = icon_path .. "20.png"
+            if forecast == "Cloudy" then sky = icon_path .. "18.png"
             elseif forecast == "Sunny" then sky = icon_path .. "10.png"
             elseif forecast == "Rain/Thunder" then sky = icon_path .. "00.png"
             elseif forecast == "Light Snow Showers" then sky = icon_path .. "09.png"
@@ -106,7 +105,7 @@ function fetch_weather()
             elseif forecast == "Mixed Rain And Hail" then sky = icon_path .. "03.png"
             elseif forecast == "Freezing Drizzle" then sky = icon_path .. "05.png"
             elseif forecast == "Freezing Rain" then sky = icon_path .. "06png"
-            elseif forecast:find("Wind") ~= nil then sky = icon_path .. "19.png"
+            elseif forecast:find("Wind") ~= nil then sky = icon_path .. "17.png"
             elseif forecast == "Heavy Snow" then sky = icon_path .. "13.png"
             elseif forecast:find("Rain") ~= nil or
                    forecast:find("Drizzle") ~= nil then sky = icon_path .. "07.png"
