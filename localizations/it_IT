@@ -1,23 +1,24 @@
-Now|Ora
+Now:|Ora:
+Sun:|Dom:
+Mon:|Lun:
+Tue:|Mar:
+Wed:|Mer:
+Thu:|Gio:
+Fri:|Ven:
+Sat:|Sab:
 Mostly Sunny|Abbastanza Soleggiato
 Sunny|Soleggiato
-Sun|Dom
-Mon|Lun
-Tue|Mar
-Wed|Mer
+Sun|Soleggiato
 Rain/Thunder|Temporali
 Isolated Thunderstorms|Temporali Isolati
 Scattered Thunderstorms|Temporali Sparsi
 Thundershowers|Rovesci Temporaleschi
 Thunderstorms|Temporali
 Thunder|Temporale
-Thu|Gio
-Fri|Ven
-Sat|Sab
 AM|In Mattinata
+PM|Nel Pomeriggio
 Early|In Mattinata
 Late|In Serata
-PM|Nel Pomeriggio
 Few|Sporadiche
 Light|Leggere
 Severe|Forti
@@ -26,6 +27,7 @@ Fair|Sereno
 Partly|Parzialmente
 Mostly|Molto
 Cloudy|Nuvoloso
+Clouds|Nuvoloso
 Scattered Showers|Temporali Sparsi
 Light Snow Showers|Nevicate Leggere
 Snow Showers|Nevicate
