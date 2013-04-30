@@ -78,7 +78,7 @@ Screenshot
 -----
 ![Screenshot][1]
 
-[1]: http://i.imgur.com/ycLqp26.png
+[1]: http://i.imgur.com/6JtjdBF.jpg
 
 License
 -----
