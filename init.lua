@@ -143,6 +143,7 @@ function remove_weather()
 end
 
 function show_weather(t_out)
+    fetch_weather()
     remove_weather()
     notification = naughty.notify({
         text = weather_data,
