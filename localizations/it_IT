@@ -20,7 +20,6 @@ PM|Nel Pomeriggio
 Early|In Mattinata
 Late|In Serata
 Few|Sporadiche
-Light|Leggere
 Severe|Forti
 Clear|Sereno
 Fair|Sereno
@@ -43,6 +42,7 @@ Blowing Rain|Pioggia Battente
 Heavy Rain|Forti Piogge
 Freezing Rain|Pioggia Congelantesi
 Showers|Piogge
+Light Rain|Pioggia Leggera
 Rain|Piovoso
 Windy|Ventoso
 Wind|Ventoso
@@ -53,3 +53,4 @@ Freezing Drizzle|Pioggerella Congelantesi
 Hail|Grandine
 Foggy|Nebbia
 Haze|Nebbia
+Light|Leggere

@@ -1,6 +1,6 @@
 -- yawn, a weather notification module for Awesome WM 3.5+.
 --
--- Author        : Luke Bonham
+-- rewrote by a stupid maniac named Luke Bonham
 
 local os = require("os")
 local wibox = require("wibox")
