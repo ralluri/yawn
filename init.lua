@@ -1,9 +1,8 @@
--- yawn, a weather notification module for Awesome WM 3.5+.
---
--- rewrote by a stupid maniac named Luke Bonham
+-- uawn, a weather notification module for Awesome WM 3.5+
 
 local os = require("os")
 local wibox = require("wibox")
+local beautiful = require("beautiful")
 local naughty = require("naughty")
 local io = require("io")
 local debug = require("debug")
@@ -76,8 +75,7 @@ function fetch_weather()
         local units = now:sub(now:find(",")+2, -2)
 
         -- Day/Night icon change
-        hour = tonumber(os.date("%H"))
-        if hour >= 6 and hour <= 18
+        hour = tonumber(os.date("%H")) if hour >= 6 and hour <= 18
         then -- Day
             if forecast == "Clear" or forecast == "Fair" then sky = icon_path .. "24.png"
             elseif forecast == "Partly Cloudy" then sky = icon_path .. "26.png"
@@ -148,8 +146,11 @@ function show_weather(t_out)
     notification = naughty.notify({
         text = weather_data,
         icon = sky,
-        timeout = t_out, hover_timeout = 0.5,
-        bg = "#060606"
+        timeout = t_out,
+        hover_timeout = 0.5,
+        --fg = beautiful.fg_normal,
+        fg = "#D4D4D4",
+        bg = beautiful.bg_normal
     })
 end
 
