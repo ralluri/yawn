@@ -1,4 +1,4 @@
--- uawn, a weather notification module for Awesome WM 3.5+
+-- yawn, a weather notification module for Awesome WM 3.5+
 
 local os = require("os")
 local wibox = require("wibox")
