@@ -52,13 +52,12 @@ function fetch_weather()
         -- In case of no connection or invalid city ID, widgets won't display
         if text == "" or text:match("City not found") 
         then
-            naughty.notify({text="City not found"})
             sky = sky_na
             if text == "" then
                 weather_data = "Service not available at the moment."
             else
-                weather_data = "<b>City not found!</b>\nAre you sure " .. city_id
-                               .. " is your Yahoo city ID?"
+                weather_data = "<b>City not found!</b>\n" .. 
+                               "Are you sure " .. city_id .. " is your Yahoo city ID?"
             end
             return
         end
