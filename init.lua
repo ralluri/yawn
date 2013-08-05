@@ -15,25 +15,24 @@ local tonumber = tonumber
 module('yawn')
 
 local project_path = debug.getinfo(1, 'S').source:match[[^@(.*/).*$]]
-local localizations_path = project_path .. '/localizations/'
+local localizations_path = project_path .. 'localizations/'
 local icon_path = project_path .. 'icons/'
 local api_url = 'http://weather.yahooapis.com/forecastrss'
 local chosen_units = '?u=c&w=' -- default is Celsius
 local weather_data = nil
 local notification = nil
 local city_id = nil
-sky_na = icon_path .. "na.png"
 local sky = nil
 local chosen_color = nil
 local language = string.gsub(os.getenv("LANG"), ".utf8", "") 
+
+sky_na = icon_path .. "na.png"
 
 icon = wibox.widget.imagebox()
 widget = wibox.widget.textbox()
 
 function execute(url, callback)
- 
     -- Reads from url, then runs the callback function on it
-    
     local f = io.popen("curl --connect-timeout 1 -fsm 3 '" .. url .. "'" )
     local ws = f:read("*all")
     f:close()
@@ -47,8 +46,8 @@ function execute(url, callback)
 end
 
 function fetch_weather()
-    execute(api_url..chosen_units..city_id, function(text)
-
+    execute(api_url..chosen_units..city_id,
+    function(text)
         -- In case of no connection or invalid city ID, widgets won't display
         if text == "" or text:match("City not found") 
         then
@@ -128,8 +127,10 @@ function fetch_weather()
                              .. "'>" .. units .. "</span>")
         
         -- Localization
-        if language:find("en_") == nil
+        local f = io.open(localizations_path .. language, "r")
+        if language:find("en_") == nil and f ~= nil
         then
+            io.close(f)
             for line in io.lines(localizations_path .. language)
             do
                 word = string.sub(line, 1, line:find("|")-1)
@@ -155,15 +156,14 @@ function show_weather(t_out)
         icon = sky,
         timeout = t_out,
         hover_timeout = 0.5,
-        --fg = beautiful.fg_normal,
-        fg = "#D4D4D4",
+        fg = chosen_color or "#D7D7D7",
         bg = beautiful.bg_normal
     })
 end
 
 function register(id, color, u)
     if u == "f" then chosen_units = '?u=f&w=' end
-    chosen_color = color or "#d7d7d7"
+    chosen_color = color or "#D7D7D7"
     city_id = id
     fetch_weather()
     update_timer = timer({ timeout = 600 }) -- check every 10 mins
