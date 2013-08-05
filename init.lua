@@ -123,7 +123,9 @@ function fetch_weather()
 
         -- Setting widgets
         icon:set_image(sky)
-        widget:set_markup(" <span font='Tamsyn 10' color='" .. chosen_color .. "'>" .. units .. "</span>")
+        widget:set_markup(" <span font='" .. beautiful.font
+                             .. "' color='" .. chosen_color
+                             .. "'>" .. units .. "</span>")
         
         -- Localization
         if language:find("en_") == nil
@@ -164,7 +166,7 @@ function register(id, color, u)
     chosen_color = color or "#d7d7d7"
     city_id = id
     fetch_weather()
-    update_timer = timer({ timeout = 600 })
+    update_timer = timer({ timeout = 600 }) -- check every 10 mins
     update_timer:connect_signal("timeout", function()
         fetch_weather()
     end)
